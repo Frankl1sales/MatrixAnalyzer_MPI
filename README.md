@@ -11,6 +11,7 @@ Este projeto implementa um programa em C utilizando MPI (Message Passing Interfa
 - [Explicação do Código](#explicação-do-código)
 - [Resultados Esperados](#resultados-esperados)
 - [Referências](#referências)
+- [Licença](#licença)
 
 ## Descrição
 
@@ -180,3 +181,7 @@ A matriz é não esparsa.
 
 - [Documentação do MPI](https://www.mpich.org/documentation/)
 - [Explicação sobre a flag `-lm`](https://stackoverflow.com/questions/44175151/what-is-the-meaning-of-lm-in-gcc)
+- 
+## Licença
+
+Este projeto é licenciado sob a [MIT License](LICENSE.md).
