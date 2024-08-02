@@ -5,6 +5,7 @@ Este projeto implementa um programa em C utilizando MPI (Message Passing Interfa
 ## Índice
 
 - [Descrição](#descrição)
+- [Instalação do MPI](#instalação-do-mpi)
 - [Como Compilar](#como-compilar)
 - [Como Executar](#como-executar)
 - [Explicação do Código](#explicação-do-código)
@@ -14,6 +15,55 @@ Este projeto implementa um programa em C utilizando MPI (Message Passing Interfa
 ## Descrição
 
 O programa gera uma matriz aleatória de tamanho 1000x1000 no processo de rank 0. Essa matriz é então distribuída entre vários processos usando MPI, e cada processo calcula estatísticas locais sobre a parte da matriz que recebeu. Essas estatísticas locais são então reduzidas para estatísticas globais que são exibidas pelo processo de rank 0.
+
+## Instalação do MPI
+
+### Em sistemas baseados em Debian/Ubuntu
+
+```sh
+sudo apt update
+sudo apt install mpich
+```
+
+### Em sistemas baseados em Red Hat/Fedora
+
+```sh
+sudo dnf install mpich
+```
+
+### Em macOS (usando Homebrew)
+
+```sh
+brew install mpich
+```
+
+### Compilando a partir do código-fonte
+
+Para instalar MPI compilando a partir do código-fonte, siga os passos abaixo:
+
+1. Baixe o código-fonte do [site oficial do MPICH](https://www.mpich.org/downloads/).
+
+2. Extraia o arquivo baixado:
+
+   ```sh
+   tar -xzf mpich-<versão>.tar.gz
+   cd mpich-<versão>
+   ```
+
+3. Compile e instale:
+
+   ```sh
+   ./configure --prefix=/usr/local/mpich
+   make
+   sudo make install
+   ```
+
+4. Adicione MPICH ao seu PATH:
+
+   ```sh
+   export PATH=/usr/local/mpich/bin:$PATH
+   export LD_LIBRARY_PATH=/usr/local/mpich/lib:$LD_LIBRARY_PATH
+   ```
 
 ## Como Compilar
 
